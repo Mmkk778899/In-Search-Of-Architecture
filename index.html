@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<style>
+  html, body{
+    background: #FFFF00;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .full-screen {
+    background:#000000;
+    width: 100vw;
+    margin: 0;  
+}
+</style>
 <html>
 	<head>
 		<link href="publication-web-resources/css/main.css" rel="stylesheet" type="text/css">
@@ -7,7 +22,7 @@
 		</script>
 	</head>
 	<body onload="showHideArrows()">
-		<iframe onload="showHideArrows()" id="contentIFrame" class="contentIframeClass" src="publication-web-resources/html/publication.html">		</iframe>
+		<iframe onload="showHideArrows()" id="contentIFrame" class="contentIframeClass" src="publication-web-resources/html/publication.html" class="full-screen">		</iframe>
 		<iframe id="dummyIFrame" class="dummyFrameClass">		</iframe>
 		<div class="prev" onclick="showPreviousPage()">		&#10094;		</div>
 		<div class="next" onclick="showNextPage()">		&#10095;		</div>
