@@ -1,75 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head> 
-
-<style>
-  html, body{
-    background: #000000;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-
-  .full-screen {
-    background:#000000;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    
-}
-  div {
-    			width:100vw;
-    			height:100vh;
-    			box-shadow:0px 0px 0px 30px rgb(0, 0, 0) inset;
-    		}
- 
-  .container { 
-            position: absolute;
-            width:100vw;
-            height: 100vh;
-            pointer-events:none;
-
-        } 
-
-  .loadingtext{
-    position: absolute;
-    display: flex;
-    color: rgb(255, 255, 255);
-    justify-content: center;
-    align-items: center;
-    background-color: #000000;
-    font-family: 'Times New Roman';
-    font-size: 100%;
-    pointer-events:none;
-  }
- 
-  .disappear{
-    animation: vanish 20s forwards;
-  }
-  @keyframes vanish{
-    100%{
-      opacity:100 ;
-      visibility: hidden;
-    }
-  }
-
-</style>
-
-<body>
-  <div class="container">
-    <div class="disappear">
-      <div class="loadingtext">
-      <h3>in search of architecture<br>loading...</h3>
-      <img src="https://s11.gifyu.com/images/SByVa.gif" alt="Presentation6" width="35%">
-    </div>
-    </div>
-  </div>
-    <a target="_blank" href="https://office.com/webapps">
-    <iframe id="myframe" src="https://1drv.ms/p/c/5ebaaecbbc622362/IQRkKKKwgHmTSbNqwiszm9U3AaxhKU9_LdElzgQUEKNZjYc?em=2&amp;wdAr=1.7777777777777777" loading="lazy" class="full-screen"></iframe>
-  </a>
+<html>
+	<head>
+		<link href="publication-web-resources/css/main.css" rel="stylesheet" type="text/css">
+		</link>
+		<script src="publication-web-resources/script/main.js" type="text/javascript">
+		</script>
+	</head>
+	<body onload="showHideArrows()">
+		<iframe onload="showHideArrows()" id="contentIFrame" class="contentIframeClass" src="publication-web-resources/html/publication.html">		</iframe>
+		<iframe id="dummyIFrame" class="dummyFrameClass">		</iframe>
+		<div class="prev" onclick="showPreviousPage()">		&#10094;		</div>
+		<div class="next" onclick="showNextPage()">		&#10095;		</div>
+	</body>
 </html>
